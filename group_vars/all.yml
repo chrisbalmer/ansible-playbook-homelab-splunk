@@ -1,0 +1,3 @@
+---
+splunk_admin_username: "{{ lookup('community.general.onepassword', 'Splunk Cluster', field='username', vault='homelab', username=op_email, subdomain=op_domain, secret_key=op_key, master_password=op_password) }}"
+splunk_admin_password: "{{ lookup('community.general.onepassword', 'Splunk Cluster', field='password', vault='homelab', username=op_email, subdomain=op_domain, secret_key=op_key, master_password=op_password) }}"
