@@ -1,0 +1,9 @@
+- name: Splunk Installation
+  hosts: full
+  gather_facts: yes
+  become: yes
+  vars:
+    - deployment_task: check_splunk.yml
+  roles:
+    - splunk.splunk
+
