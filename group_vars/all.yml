@@ -7,3 +7,4 @@ splunk_package_url_uf: https://nas.balmerfamilyfarm.com:9000/public/splunk/splun
 
 splunk_configure_secret: true
 splunk_secret_text: "{{ lookup('community.general.onepassword', 'Splunk Cluster', field='splunk_secret', vault='homelab', username=op_email, subdomain=op_domain, secret_key=op_key, master_password=op_password) }}"
+slack_token: "{{ lookup('community.general.onepassword', 'Slack Homelab Token', field='password', vault='homelab', username=op_email, subdomain=op_domain, secret_key=op_key, master_password=op_password) }}"
