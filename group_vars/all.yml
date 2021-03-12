@@ -4,3 +4,5 @@ splunk_admin_password: "{{ lookup('community.general.onepassword', 'Splunk Clust
 
 splunk_package_url_full: https://nas.balmerfamilyfarm.com:9000/public/splunk/splunk-8.1.2-545206cc9f70-Linux-x86_64.tgz
 splunk_package_url_uf: https://nas.balmerfamilyfarm.com:9000/public/splunk/splunkforwarder-8.1.2-545206cc9f70-Linux-x86_64.tgz
+
+splunk_secret_test: "{{ lookup('community.general.onepassword', 'Splunk Cluster', field='splunk_secret', vault='homelab', username=op_email, subdomain=op_domain, secret_key=op_key, master_password=op_password) }}"
